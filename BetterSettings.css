@@ -7,7 +7,6 @@ Website: https://kinmokusei.dev/
 STILL IN DEVELOPMENT
 */
 
-
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
@@ -47,7 +46,7 @@ STILL IN DEVELOPMENT
 
 /* ####################[ Scrollbars ]#################### */
 .sidebarRegionScroller-FXiQOh::-webkit-scrollbar {
-	background-color: rgb(var(--settings-color-sidebar-background));
+	background-color: rgb(var(--settings-color-content-background));
 }
 
 .sidebarRegionScroller-FXiQOh::-webkit-scrollbar-thumb {
@@ -55,12 +54,8 @@ STILL IN DEVELOPMENT
 }
 
 /* ####################[ Sidebar ]#################### */
-.standardSidebarView-E9Pc3j .sidebarRegion-1VBisG {
-	background: linear-gradient(to left, rgb(var(--settings-color-content-background)), rgb(var(--settings-color-sidebar-background)) 2%);
-}
-
 .sidebar-nqHbhN {
-	background-color: rgb(var(--settings-color-sidebar-background));
+	background: linear-gradient(to left, rgb(var(--settings-color-content-background)), rgb(var(--settings-color-sidebar-background)) 2%);
 	padding-top: 41px;
 }
 
