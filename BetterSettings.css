@@ -1,0 +1,1122 @@
+/*
+
+Addon: Better Settings
+Author: Kurou
+Website: https://kinmokusei.dev/
+
+STILL IN DEVELOPMENT
+*/
+
+
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root {
+	/* Colors */
+	--settings-color-sidebar-background: 30, 30, 30;
+	--settings-color-content-background: 20, 20, 20;
+	--settings-color-accents: 0, 250, 250;
+	
+	/* Parts */
+	--settings-part-header: none;
+	--settings-part-social: none;
+	--settings-part-info: flex;
+	--settings-part-theme-name: 'BetterSettings';
+	--settings-part-title: block;
+	--settings-part-title-font: 'Secular One', sans-serif;
+	
+	/* Icons */
+	--settingsiconssize: 30px;
+	--settingsiconsgap: 70px;
+
+	/* Default Variables */
+	--status-red-500: rgb(250, 0, 0);
+	--brand-500: rgb(var(--settings-color-accents));
+}
+
+/* ####################[ Background ]#################### */
+.standardSidebarView-E9Pc3j .contentRegion-3HkfJJ::before {
+	background-color: rgb(var(--settings-color-content-background));
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+
+/* ####################[ Scrollbars ]#################### */
+.sidebarRegionScroller-FXiQOh::-webkit-scrollbar {
+	background-color: rgb(var(--settings-color-sidebar-background));
+}
+
+.sidebarRegionScroller-FXiQOh::-webkit-scrollbar-thumb {
+	background-color: rgb(var(--settings-color-accents));
+}
+
+/* ####################[ Sidebar ]#################### */
+.standardSidebarView-E9Pc3j .sidebarRegion-1VBisG {
+	background: linear-gradient(to left, rgb(var(--settings-color-content-background)), rgb(var(--settings-color-sidebar-background)) 2%);
+}
+
+.sidebar-nqHbhN {
+	background-color: rgb(var(--settings-color-sidebar-background));
+	padding-top: 41px;
+}
+
+/* title */
+.side-2ur1Qk::before {
+	content: var(--settings-part-theme-name);
+	display: var(--settings-part-title);
+	background: linear-gradient(to right, rgba(var(--settings-color-accents), 0.2), rgb(var(--settings-color-accents)), rgb(var(--settings-color-accents), 0.2));
+	-webkit-background-clip: text;
+	color: transparent;
+	text-shadow: 1px 1px 10px rgb(0, 0, 0);
+	width: 300px;
+	height: 50px;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-family: var(--settings-part-title-font);
+	text-align: center;
+}
+
+/* a. header */
+.sidebar-nqHbhN .side-2ur1Qk .header-2Kx1US {
+	margin: auto;
+	color: rgb(250, 250, 250);
+	display: var(--settings-part-header);
+}
+
+
+/* b. divider */
+
+.sidebar-nqHbhN .side-2ur1Qk .separator-2wx7h6 {
+	display: block;
+	background: linear-gradient(to bottom right, rgb(var(--settings-color-accents)), rgba(var(--settings-color-accents), 0.2));
+	box-shadow: 0px 2px 5px rgb(0, 0, 0);
+	height: 3px;
+	width: 90%;
+}
+
+/* c. icons */
+
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG::before {
+	background-color: rgb(250, 250, 250);
+}
+
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG.premiumTab-39eQzY .background-Gjdjzm.selectedBackground-1t6xXq {
+	background: transparent;
+}
+
+/* d. premium */
+.sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG .premiumLabel-3HPvdB svg {
+	display: none;
+}
+
+.bd-changelog-button {
+	margin-left: 280px;
+	margin-top: -20px;
+	position: absolute;
+}
+
+/* e. bottom */
+.sidebar-nqHbhN .side-2ur1Qk .socialLinks-3ywLUf {
+	margin-top: 50px;
+	display: var(--settings-part-social);
+}
+
+.sidebar-nqHbhN .side-2ur1Qk .socialLinks-3ywLUf svg {
+	color: rgba(250, 250, 250, 0.3);
+	transition: all .2s ease;
+}
+
+.sidebar-nqHbhN .side-2ur1Qk .socialLinks-3ywLUf svg:hover {
+	color: rgba(250, 250, 250, 1);
+}
+
+.sidebar-nqHbhN .side-2ur1Qk .info-3pQQBb {
+	margin-top: 10px;
+	display: var(--settings-part-info);
+	--text-muted: rgba(250, 250, 250, 0.3);
+	pointer-events: none;
+}
+
+/* f. selected */
+#bd-settings-sidebar .ui-tab-bar-item, .side-2ur1Qk .item-3XjbnG {
+	transition: all .2s ease-in-out;
+	border-radius: 2px;
+	margin-top: 5px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item:hover, .side-2ur1Qk .item-3XjbnG:hover {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	box-shadow: 0px 0px 3px rgb(0, 0, 0) !important;
+	border-radius: 2px;
+	position: relative;
+	padding-left: 40px;
+}
+
+.side-2ur1Qk .item-3XjbnG[style*="color: rgb(114, 137, 218)"] {
+	color: var(--interactive-normal) !important;
+}
+
+div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item:hover, div[aria-label=GUILD_SETTINGS] .side-2ur1Qk .item-3XjbnG:hover {
+	padding-left: 15px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected, .side-2ur1Qk .item-3XjbnG[style*="background-color: rgb(114, 137, 218)"], .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG {
+	background-color: rgba(0, 0, 0, .5) !important;
+	box-shadow: 0px 0px 3px rgb(0, 0, 0) !important;
+	padding-left: 40px;
+	color: rgb(250, 250, 250) !important;
+}
+
+.topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG {
+	background-color: rgba(0, 0, 0, .65) !important;
+	padding-left: 15px;
+}
+
+div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, div[aria-label=GUILD_SETTINGS] .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG, div[aria-label=GUILD_SETTINGS] .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG {
+	padding-left: 25px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item.selected::after, .side-2ur1Qk .item-3XjbnG[style*="background-color: rgb(114, 137, 218)"]::after, .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after, .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 5px;
+	border-radius: 0px;
+	background: linear-gradient(to bottom right, rgb(var(--settings-color-accents)), rgba(var(--settings-color-accents), 0.3));
+	z-index: 1;
+}
+
+.standardSidebarView-E9Pc3j  .textBadge-1fdDPJ {
+	color: rgb(0, 0, 0);
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+/* ####################[ Content ]#################### */
+.contentRegion-3HkfJJ {
+	flex: 1 1 100%;
+}
+
+.contentColumn-1C7as6,
+.customColumn-2n-oKU {
+	max-width: 95% !important;
+}
+
+/* a. close */
+.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma {
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .keybind-13vtq8 {
+	display: none;
+}
+
+.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma:hover {
+	border-color: rgba(250, 250, 250, 0.8);
+	background-color: transparent;
+	box-shadow: 0px 0px 2px rgb(250, 250, 250);
+}
+
+.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma, .contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma svg {
+	border-radius: 3px;
+	border-color: rgba(250, 250, 250, 0.2);
+	color: rgba(250, 250, 250, 0.2);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma:hover svg {
+	color: rgba(250, 250, 250, 0.8);
+}
+
+/* ####################[ BD Themes and Plugins ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-settings-title {
+	color: rgb(250, 250, 250);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-button-title, .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-controls .bd-button, .contentRegion-3HkfJJ .contentColumn-1C7as6 .button-ZJ9ZzX {
+	background-color: rgba(var(--settings-color-content-background), 0.5);
+	border: 2px solid rgba(var(--settings-color-accents), 0.3);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-button-title:hover, .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-controls .bd-button:hover, .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexChild-3PzYmX .container-1_EVMa .flex-2S1XBF .button-ZJ9ZzX:hover {
+	background-color: rgba(var(--settings-color-content-background), 1);
+	border: 2px solid rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-controls .bd-search-wrapper {
+	border-radius: 1px;
+	width: 500px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-controls .bd-controls-advanced .bd-addon-views .bd-view-button {
+	border-radius: 2px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-controls .bd-controls-advanced .bd-addon-views .bd-view-button.selected {
+	background-color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card {
+	background-color: rgba(var(--settings-color-content-background), 0.5);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 1px;
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card:hover .bd-addon-header {
+	background-color: rgba(var(--settings-color-accents), 0.3);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-addon-header {
+	background-color: rgba(var(--settings-color-accents), 0.1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-addon-header .bd-title .bd-name {
+	color: rgba(250, 250, 250, 0.5);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card:hover .bd-addon-header .bd-name {
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-addon-header .bd-title .bd-meta {
+	color: rgba(250, 250, 250, 0.2);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card:hover .bd-addon-header .bd-meta {
+	color: rgba(250, 250, 250, 0.5);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-description-wrap .bd-description {
+	color: rgba(250, 250, 250, 0.4);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-addon-button .bd-link svg {
+	color: rgba(250, 250, 250, 0.5);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-addon-button .bd-link svg:hover {
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-controls .bd-button {
+	margin-left: 10px;
+}
+
+/* ####################[ BD Updates ]#################### */
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container {
+	background: rgba(var(--settings-color-accents), 0.1);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container:hover {
+	background: rgba(var(--settings-color-accents), 0.3);
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container:hover .bd-setting-item .bd-setting-header .bd-setting-title {
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container:hover .bd-setting-item .bd-setting-note {
+	color: rgba(250, 250, 250, 0.7);
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-setting-item .bd-setting-header {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-setting-item .bd-setting-header .bd-setting-title {
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-setting-item .bd-setting-note {
+	margin-left: 10px;
+	color: rgba(250, 250, 250, 0.3);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-setting-header .bd-filled-checkmark {
+	margin-left: 1130px;
+	margin-top: 35px;
+	position: absolute;
+	background-color: rgb(var(--settings-color-accents));
+	box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-empty-updates svg {
+	margin-top: 5px;
+	fill: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-empty-updates::after {
+	content: 'seperator';
+	color: transparent;
+}
+
+/* ####################[ BD Settings ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-settings-group  .bd-settings-container .bd-setting-item .bd-setting-note {
+	color: rgb(var(--settings-color-accents));
+}
+
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-switch .bd-switch-body, .control-1fl03- .container-2nx-BQ {
+	background-color: rgba(var(--settings-color-content-background), 0.5) !important;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 5px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-switch.bd-switch-checked, .container-2nx-BQ.checked-25WXMf {
+	background-color: rgb(var(--settings-color-accents)) !important;
+	border-radius: 5px;
+}
+
+/* ####################[ Overlay ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .sectionTitle-3j2YI1 .title-3hptVQ {
+	color: rgb(250, 250, 250);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flex-2S1XBF .flexChild-3PzYmX .h5-2RwDNl {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexChild-3PzYmX .container-1_EVMa {
+	border-color: rgba(var(--settings-color-accents), 0.5);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexChild-3PzYmX .container-1_EVMa:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .item-2idW98 {
+	background-color: rgba(var(--settings-color-content-background), 0.8);
+	border: 1px solid rgba(var(--settings-color-accents), 0.3);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	color: rgba(250, 250, 250, 0.5);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .item-2idW98[aria-checked='true'] {
+	background-color: rgba(var(--settings-color-content-background), 1);
+	border: 1px solid rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .marginTop40-Q4o1tS .children-1xdcWE .flexChild-3PzYmX .notificationSettings-3dppO6 .wrapper-SdcMKg {
+	border-color: rgba(var(--settings-color-accents), 0.8);
+	border-radius: 2px;
+	box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .marginTop40-Q4o1tS .children-1xdcWE .flexChild-3PzYmX .notificationSettings-3dppO6 .wrapper-SdcMKg .disabled-35mc5w {
+	color: rgb(250, 0, 0);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .marginTop40-Q4o1tS .children-1xdcWE .flexChild-3PzYmX .notificationSettings-3dppO6 .wrapper-SdcMKg .option-1QI4c9 {
+	background-color: rgba(100, 100, 100, 0.4);
+	border-radius: 1px;
+	box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .marginTop40-Q4o1tS .children-1xdcWE .flexChild-3PzYmX .notificationSettings-3dppO6 .wrapper-SdcMKg .option-1QI4c9.selected-18Wszc {
+	background-color: rgba(var(--settings-color-accents), 0.5);
+}
+
+/* ####################[ Registered Games ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.notDetected-M3Ghh2 {
+	background-color: rgba(var(--settings-color-accents), 0.1);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.notDetected-M3Ghh2 .gameNameLastPlayed-2hWoXJ .gameName-zbZetm {
+	color: rgba(250, 250, 250, 0.5);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.notDetected-M3Ghh2 .gameNameLastPlayed-2hWoXJ .lastPlayed-1jum9A {
+	color: rgba(250, 250, 250, 0.2)
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.activeGame-1OdxzI {
+	background-color: rgba(var(--settings-color-accents), 0.6);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.activeGame-1OdxzI .gameNameLastPlayed-2hWoXJ .gameName-zbZetm {
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.activeGame-1OdxzI .gameNameLastPlayed-2hWoXJ .lastPlayed-1jum9A {
+	color: rgba(250, 250, 250, 0.7)
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .colorLink-1Md3RZ {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameName-zbZetm {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameNameInput-2wbDJ9:hover, .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameNameInput-2wbDJ9:focus {
+	background-color: rgba(var(--settings-color-content-background), 1);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-color: rgb(var(--settings-color-accents));
+	border-radius: 1px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .lastPlayed-1jum9A {
+	color: rgba(250, 250, 250, 0.5)
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .overlayToggleIcon-1WRcQ9 .overlayToggleIconOff-ps4gGp .fill-297bdf {
+	fill: rgba(250, 250, 250, 0.2);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .overlayToggleIcon-1WRcQ9 .overlayToggleIconOff-ps4gGp rect {
+	fill: rgb(250, 0, 0);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .overlayToggleIcon-1WRcQ9 .overlayToggleIconOn-21NN2N .fill-297bdf {
+	fill: rgba(var(--settings-color-accents), 0.5);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .removeGame-3V7nss {
+	border-radius: 1px;
+	background-color: transparent;
+	border: 1px solid rgba(250, 0, 0, 0.5);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .removeGame-3V7nss:hover {
+	border: 1px solid rgba(250, 0, 0, 1);
+}
+
+/* ####################[ Activity Privacy ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .anchor-1MIwyf {
+	color: rgb(var(--settings-color-accents));
+}
+
+/* ####################[ Keybindings ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .warning-RBGtx2 {
+	background-color: rgb(var(--settings-color-content-background));
+	border-color: rgb(250, 0, 0);
+	border-radius: 1px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .warning-RBGtx2 .iconDiv-3ISDKO .icon-2fP4ae {
+	color: rgb(250, 0, 0);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .flexChild-3PzYmX .button-f2h6uQ {
+	background-color: rgba(var(--settings-color-content-background), 0.5);
+	border: 2px solid rgba(var(--settings-color-accents), 0.3);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .flexChild-3PzYmX .button-f2h6uQ:hover {
+	background-color: rgba(var(--settings-color-content-background), 1);
+	border: 2px solid rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 [aria-haspopup='listbox'] {
+	background-color: rgba(var(--settings-color-content-background), 0.7);
+	border-color: rgba(var(--settings-color-accents), 0.5);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 [aria-haspopup='listbox']:hover {
+	background-color: rgba(var(--settings-color-content-background), 1);
+	border-color: rgba(var(--settings-color-accents), 1);
+}
+
+/* popout */
+.popout-1KHNAq, #popout_279 .popout-1KHNAq {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-color: transparent;
+}
+
+.popout-1KHNAq .option-2eIyOn:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popout-1KHNAq .option-2eIyOn[aria-selected='true'] {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 1px solid rgba(var(--settings-color-accents), 0.5);
+}
+
+.popout-1KHNAq .option-2eIyOn[aria-selected='true'] .selectedIcon-19TbzU g {
+	color: rgba(var(--settings-color-accents), 0.5);
+}
+
+
+.contentRegion-3HkfJJ .defaultKeybind-1rEiTa .defaultColor-24IHKz {
+	color: rgb(250, 250 , 250);
+}
+
+.contentRegion-3HkfJJ .defaultKeybind-1rEiTa .key-N5VmHN {
+	background: rgba(var(--settings-color-content-background), 0.5);
+	border-color: transparent;
+	border-radius: 2px;
+	box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .defaultKeybind-1rEiTa .key-N5VmHN:hover {
+	box-shadow: 0px 0px 2px rgba(var(--settings-color-accents, 1));
+}
+
+/* ####################[ Voice & Video ]#################### */
+.contentRegion-3HkfJJ .slider-1NC-Gf .bar-1Bhnl9 .barFill-2Bh7CX {
+	background-color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .slider-1NC-Gf .bar-1Bhnl9 {
+	background-color: rgb(40, 40, 40);
+	border-radius: 2px;
+	height: 5px;
+}
+
+.contentRegion-3HkfJJ .slider-1NC-Gf .grabber-2GQyvM {
+	background-color: rgb(var(--settings-color-accents));
+	border-color: transparent;
+	border-radius: 2px;
+}
+
+.contentRegion-3HkfJJ .container-18g_gN .description-30xx7u {
+	color: rgba(250, 250, 250,  0.4);
+}
+
+.contentRegion-3HkfJJ .micTest-19EtdQ .micTestButton-3bMlCM {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgba(var(--settings-color-accents), 0.5);
+	color: rgba(250, 250, 250, 0.5);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .micTest-19EtdQ .micTestButton-3bMlCM:hover {
+	border: 2px solid rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .micTest-19EtdQ .wrapper-UvA17F .container-3NTP7o .progress-1S-TDF {
+	background-color: rgb(250, 250, 250);
+}
+
+.contentRegion-3HkfJJ .cameraWrapper-3a7Ngv {
+	background-color: rgb(30, 30, 30);
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+.contentRegion-3HkfJJ .cameraWrapper-3a7Ngv .button-f2h6uQ {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgba(var(--settings-color-accents), 0.5);
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .cameraWrapper-3a7Ngv .button-f2h6uQ:hover {
+	border: 2px solid rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .backgroundOption-2mIYjm .backgroundOptionInner-SSz19O {
+	background-color: rgb(var(--settings-color-content-background));
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+.contentRegion-3HkfJJ .backgroundOption-2mIYjm.backgroundOptionSelected-3J38oq .backgroundOptionRing-1vvQ0C {
+	border-color: rgb(var(--settings-color-accents));
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .marginBottom20-315RVT .children-1xdcWE .formNotice-2nS8ey {
+	background-color: rgb(var(--settings-color-content-background));
+	border-color: transparent;
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contentRegion-3HkfJJ .flex-2S1XBF .button-f2h6uQ {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgba(var(--settings-color-accents), 0.7);
+	color: rgba(250, 250, 250, 0.5);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .flex-2S1XBF .button-f2h6uQ:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .button-f2h6uQ.colorRed-rQXKgM {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgba(250, 0, 0, 0.7);
+	color: rgba(250, 250, 250, 0.5);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .button-f2h6uQ.colorRed-rQXKgM:hover {
+	border-color: rgba(250, 0, 0, 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+/* ####################[ Availability ]#################### */
+.contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgb(var(--settings-color-accents));
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO .previewHeader-3XkwNe .button-f2h6uQ {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgba(var(--settings-color-accents), 0.5);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO .previewHeader-3XkwNe .button-f2h6uQ:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO .previewHeader-3XkwNe .previewAvatars-5zC6sZ .wrapper-1VLyxH {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .checkbox-f1HnKB {
+	background-color: rgb(var(--settings-color-content-background));
+	border-color: rgb(var(--settings-color-accents));
+	border-radius: 30px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .checkbox-f1HnKB.checked-1pZh2h  {
+	--brand-experiment-500: rgb(var(--settings-color-accents));
+	--brand-experiment-400: transparent;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .marginBottom20-315RVT .ttsPreviewWrapper-1d5bI6 .button-f2h6uQ {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgba(var(--settings-color-accents), 0.7);
+	color: rgba(250, 250 , 250, 0.5);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .marginBottom20-315RVT .ttsPreviewWrapper-1d5bI6 .button-f2h6uQ:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250 , 250, 1);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .marginBottom20-315RVT .slider-1NC-Gf .markAbove-21dc11:nth-child(5) .markValue-2U_-UG {
+	color: rgb(var(--settings-color-accents));
+}
+
+/* ####################[ Pay Method ]#################### */
+.contentRegion-3HkfJJ #billing-tab .codeRedemptionRedirect-2hYMSQ {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-color: transparent;
+	border-radius: 3px;
+}
+
+/* ####################[ Gift Inventory ]#################### */
+.contentRegion-3HkfJJ .children-1xdcWE .flex-2S1XBF .codeRedemptionInput-3K_ItZ .input-2g-os5 {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+/* ####################[ Subscription ]#################### */
+.contentRegion-3HkfJJ .noItemsCard-2V85P5, .noItemsCard-5EOcCl {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .noItemsCard-2V85P5 .gameIcon-1mDo1J.noItemsIcon-1rZlXZ, .noItemsCard-5EOcCl .gameIcon-1mDo1J.noItemsIcon-2OeOld {
+	color: rgb(var(--settings-color-accents));
+	background-color: transparent;
+}
+
+/* ####################[ Server Upgrade ]#################### */
+.contentRegion-3HkfJJ .features-2OVNMp .feature-LzXyUM .icon-1Z47rO {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .progressCircle-1pQMui, .contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .guildInfo-16ssyU .guildBoostingIcon-2B5iYK, .contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .gemWithLabel-9XSuaB {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .wrapper-3Zq_cJ {
+	background: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(var(--settings-color-accents));
+	border-radius: 5px;
+	border: 2px solid rgb(var(--settings-color-accents));
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .wrapper-3Zq_cJ:hover {
+	box-shadow: 0px 0px 10px rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .wrapper-3Zq_cJ .tiersList-12_0Zw .tierVertical-1fTmTd {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .wrapper-3Zq_cJ .button-f2h6uQ {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: 2px solid rgba(var(--settings-color-accents), 0.7);
+	color: rgba(250, 250, 250, 0.5);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .wrapper-3Zq_cJ .button-f2h6uQ:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+/* ####################[ Nitro ]#################### */
+.contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA {
+	width: 1250px;
+	margin-left: -250px;
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v {
+	background-image: none;
+	margin: auto;
+	height: 250px;
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .shinyButton-2Q9MDB, .contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .button-1U79Hu {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: 2px solid rgba(var(--settings-color-accents), 0.7);
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease-in-out;
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .shinyButton-2Q9MDB:hover, .contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .button-1U79Hu:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .featureGrid-SSlfD0 .feature-2IUcBI {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .featureGrid-SSlfD0 .feature-2IUcBI:hover {
+	box-shadow: 0px 0px 5px rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .featureGrid-SSlfD0 .feature-2IUcBI .tag-3Upstw {
+	background-color: rgb(var(--settings-color-accents));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	color: rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .featureGrid-SSlfD0 .feature-2IUcBI .heading-lg-medium-3gUJeM {
+	color: rgb(var(--settings-color-accents));
+	text-shadow: 1px 5px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .featureGrid-SSlfD0 .feature-2IUcBI .learnMoreLink-2JwgbJ {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .shinyButton-2Q9MDB, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .button-1U79Hu, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .shinyButton-2Q9MDB, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .button-1U79Hu {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: 2px solid rgba(var(--settings-color-accents), 0.7);
+	color: rgba(250, 250, 250, 0.5);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .shinyButton-2Q9MDB:hover, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .button-1U79Hu:hover, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .shinyButton-2Q9MDB:hover, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .button-1U79Hu:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .perkList-1bla2U .perkListItemIcon-3Odm5d {
+	color: rgb(var(--settings-color-accents));
+}
+
+/* ####################[ Connected Accounts ]#################### */
+.contentRegion-3HkfJJ .children-1xdcWE .connectContainer-1hylYM, .contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectContainer-1hylYM .accountButton-234qAZ .accountButtonInner-33vCDY {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectContainer-1hylYM .accountButton-234qAZ .accountButtonInner-33vCDY:hover {
+	box-shadow:  0px 0px 5px rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j:hover {
+	box-shadow: 0px 0px 5px rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j .connectionHeader-Ixbb1s {
+	background-color: rgba(var(--settings-color-accents), 0.2);
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j .connectionHeader-Ixbb1s .connectionDelete-3YgMVq {
+	border: 2px solid transparent;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j .connectionHeader-Ixbb1s .connectionDelete-3YgMVq:hover {
+	border-color: rgb(var(--settings-color-accents));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j .connectionHeader-Ixbb1s .connectionDelete-3YgMVq svg {
+	color: rgba(250, 250, 250, 0.5);
+	margin-top: 5px;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j .connectionHeader-Ixbb1s .connectionDelete-3YgMVq:hover svg {
+	color: rgb(var(--settings-color-accents));
+}
+
+/* ####################[ Devices ]#################### */
+.contentRegion-3HkfJJ .children-1xdcWE .session-9khLqt {
+	background-color: rgb(var(--settings-color-content-background));
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	margin-top: 10px;
+	border-bottom: none;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .session-9khLqt .sessionIcon-2fwSzb {
+	margin-left: 10px;
+	color: rgb(var(--settings-color-accents));
+	background-color: transparent;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .session-9khLqt .sessionMoreButton-2cApSx {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border: 2px solid transparent;
+	text-align: center;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .session-9khLqt .sessionMoreButton-2cApSx:hover {
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .session-9khLqt .sessionMoreButton-2cApSx:hover svg {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .session-9khLqt .sessionMoreButton-2cApSx svg {
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease-in-out;
+	margin-top: 1px;
+}
+
+/* ####################[ Apps ]#################### */
+.contentRegion-3HkfJJ #authorized-apps-tab .children-1xdcWE .formNotice-2nS8ey {
+	background-color: rgb(var(--settings-color-content-background));
+	border-radius: 3px;
+	border: none;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ #authorized-apps-tab .children-1xdcWE .authedApp-8q3NA9 {
+	background-color: rgb(var(--settings-color-content-background));
+	border: none;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+/* ####################[ Security ]#################### */
+.contentRegion-3HkfJJ .children-1xdcWE .marginBottom40-fvAlAV .marginBottom4-1fdMNe .item-2idW98 {
+	border-left: none;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .marginBottom40-fvAlAV .marginBottom4-1fdMNe .item-2idW98:nth-child(1) .radioBar-3w9XY- {
+	border-radius: 2px;
+	border-left: 10px solid rgb(0, 250, 00);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .marginBottom40-fvAlAV .marginBottom4-1fdMNe .item-2idW98:nth-child(2) .radioBar-3w9XY- {
+	border-radius: 2px;
+	border-left: 10px solid rgb(250, 100, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .marginBottom40-fvAlAV .marginBottom4-1fdMNe .item-2idW98:nth-child(3) .radioBar-3w9XY- {
+	border-radius: 2px;
+	border-left: 10px solid rgb(250, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .textBadge-1fdDPJ {
+	--brand-500: rgb(var(--settings-color-accents));
+	color: rgb(0, 0, 0);
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .formNotice-2nS8ey {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: none;
+	border-radius: 3px;
+}
+
+/* ####################[ Profiles ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .tabBar-11FwuO .item-3XjbnG {
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .tabBar-11FwuO .item-3XjbnG:hover {
+	border-color: rgb(var(--settings-color-accents));;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .tabBar-11FwuO .item-3XjbnG.selected-g-kMVV {
+	border-color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .button-f2h6uQ {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: 2px solid rgba(var(--settings-color-accents), 0.7);
+	border-radius: 3px;
+	color: rgba(250, 250, 250, 0.5);
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .button-f2h6uQ:hover {
+	border: 2px solid rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .customizationSection-IGy2fS .colorSwatch-2UxEuG .swatch-efj8wq {
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	width: 100px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .customizationSection-IGy2fS .channelTextArea-1VQBuV .bioTextArea-dDGOeC {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	border: 1px solid rgb(var(--settings-color-accents));
+	height: 250px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .customizationSection-IGy2fS .channelTextArea-1VQBuV .fakeLink-1wGafz {
+	color: rgb(var(--settings-color-accents));
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .customizationSection-IGy2fS .channelTextArea-1VQBuV .bioTextArea-dDGOeC .buttons-uaqb-5 {
+	margin-right: 0;
+	margin-top: 5px;
+}
+
+/* ####################[ My Account ]#################### */
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .userInfo-regn9W .button-f2h6uQ, .contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP .fieldButton-14lHvK, .contentRegion-3HkfJJ .children-1xdcWE .changePasswordButton-3j5UVD {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: 2px solid rgba(var(--settings-color-accents), 0.7);
+	color: rgba(250, 250, 250, 0.5);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .userInfo-regn9W .button-f2h6uQ:hover, .contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP .fieldButton-14lHvK:hover, .contentRegion-3HkfJJ .children-1xdcWE .changePasswordButton-3j5UVD:hover {
+	border-color: rgba(var(--settings-color-accents), 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .userInfo-regn9W .containerWithContent-2_V0PM .clickable-28QF7i {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .userInfo-regn9W .avatar-3mTjvZ {
+	box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE {
+	background-color: rgb(var(--settings-color-content-background));
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP {
+	background-color: rgb(var(--settings-color-content-background));
+	border-radius: 0px;
+}
+
