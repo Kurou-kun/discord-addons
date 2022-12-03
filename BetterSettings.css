@@ -4,7 +4,14 @@ Addon: Better Settings
 Author: Kurou
 Website: https://kinmokusei.dev/
 
-STILL IN DEVELOPMENT
+Update Log:
+	03.12.2022 
+		- Fixed buttons.
+		- Remaked Change Log button from BetterDiscord.
+		- Added title.
+		- Adjusted animation on hover to sidebar items.
+		- Redjusted amount of code to edit specific elements.
+
 */
 
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
@@ -15,22 +22,20 @@ STILL IN DEVELOPMENT
 	--settings-color-sidebar-background: 30, 30, 30;
 	--settings-color-content-background: 20, 20, 20;
 	--settings-color-accents: 0, 250, 250;
+	--settings-color-accents2: 0, 250, 250;
 	
 	/* Parts */
 	--settings-part-header: none;
 	--settings-part-social: none;
 	--settings-part-info: flex;
-	--settings-part-theme-name: 'BetterSettings';
+	--settings-part-theme-name: 'bettersettings';
 	--settings-part-title: block;
 	--settings-part-title-font: 'Secular One', sans-serif;
+	--changelog-between-header: 0px;	/* If header is block: 20px; If header is none: 0px; */
 	
 	/* Icons */
 	--settingsiconssize: 30px;
 	--settingsiconsgap: 70px;
-
-	/* Default Variables */
-	--status-red-500: rgb(250, 0, 0);
-	--brand-500: rgb(var(--settings-color-accents));
 }
 
 /* ####################[ Background ]#################### */
@@ -45,55 +50,90 @@ STILL IN DEVELOPMENT
 }
 
 /* ####################[ Scrollbars ]#################### */
-.sidebarRegionScroller-FXiQOh::-webkit-scrollbar {
+.sidebarRegionScroller-FXiQOh::-webkit-scrollbar, .contentRegionScroller-2_GT_N::-webkit-scrollbar {
 	background-color: rgb(var(--settings-color-content-background));
 }
 
-.sidebarRegionScroller-FXiQOh::-webkit-scrollbar-thumb {
+.sidebarRegionScroller-FXiQOh::-webkit-scrollbar-thumb, .contentRegionScroller-2_GT_N::-webkit-scrollbar-thumb, .layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .content-2hZxGK::-webkit-scrollbar-thumb {
 	background-color: rgb(var(--settings-color-accents));
+	border-radius: 3px;
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .content-2hZxGK::-webkit-scrollbar-track {
+	background-color: rgb(var(--settings-color-content-background));
 }
 
 /* ####################[ Sidebar ]#################### */
 .sidebar-nqHbhN {
 	background: linear-gradient(to left, rgb(var(--settings-color-content-background)), rgb(var(--settings-color-sidebar-background)) 2%);
-	padding-top: 41px;
+	padding-top: 21px;
+	--status-red-500: rgb(250, 0, 0);
+	--brand-500: rgb(var(--settings-color-accents));
 }
 
 /* title */
 .side-2ur1Qk::before {
 	content: var(--settings-part-theme-name);
 	display: var(--settings-part-title);
-	background: linear-gradient(to right, rgba(var(--settings-color-accents), 0.2), rgb(var(--settings-color-accents)), rgb(var(--settings-color-accents), 0.2));
+	background: linear-gradient(to right, rgba(var(--settings-color-accents2), 0.2), rgb(var(--settings-color-accents)), rgb(var(--settings-color-accents2), 0.2));
 	-webkit-background-clip: text;
 	color: transparent;
 	text-shadow: 1px 1px 10px rgb(0, 0, 0);
 	width: 300px;
-	height: 50px;
+	height: 70px;
 	font-size: 30px;
 	text-transform: uppercase;
 	font-family: var(--settings-part-title-font);
 	text-align: center;
 }
 
-/* a. header */
+/* header */
 .sidebar-nqHbhN .side-2ur1Qk .header-2Kx1US {
 	margin: auto;
 	color: rgb(250, 250, 250);
 	display: var(--settings-part-header);
 }
 
+.bd-sidebar-header {
+	display: flex;
+}
 
-/* b. divider */
+.bd-sidebar-header .header-2Kx1US {
+	position: absolute;
+	background-color: transparent;
+}
+
+.bd-sidebar-header .header-2Kx1US .eyebrow-Ejf06y{
+	display: none;
+}
+
+.bd-sidebar-header .header-2Kx1US::after {
+	content: 'betterdiscord';
+	position: relative;
+	font-family: var(--font-display);
+	color: rgb(250, 250, 250);
+    font-size: 12px;
+    line-height: 16px;
+	font-weight: 700;
+	margin-left: 80px;
+	margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+	display: var(--settings-part-header);
+	
+}
+
+/* divider */
 
 .sidebar-nqHbhN .side-2ur1Qk .separator-2wx7h6 {
 	display: block;
-	background: linear-gradient(to bottom right, rgb(var(--settings-color-accents)), rgba(var(--settings-color-accents), 0.2));
+	background: linear-gradient(to bottom right, rgb(var(--settings-color-accents)), rgba(var(--settings-color-accents2), 0.2));
 	box-shadow: 0px 2px 5px rgb(0, 0, 0);
 	height: 3px;
 	width: 90%;
 }
 
-/* c. icons */
+/* icons */
 
 .sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG::before {
 	background-color: rgb(250, 250, 250);
@@ -103,18 +143,45 @@ STILL IN DEVELOPMENT
 	background: transparent;
 }
 
-/* d. premium */
+/* premium */
 .sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG .premiumLabel-3HPvdB svg {
 	display: none;
 }
 
-.bd-changelog-button {
-	margin-left: 280px;
-	margin-top: -20px;
-	position: absolute;
+/* changelog */
+.sidebar-nqHbhN .bd-changelog-button {
+	margin-left: 0;
+	margin-bottom: calc(var(--changelog-between-header) + 7px);
+	top: calc(var(--changelog-between-header) + 5px);
+	position: relative;
+	width: 286px;
+	height: 40px !important;
+	display: block;
+	cursor: pointer;
 }
 
-/* e. bottom */
+.sidebar-nqHbhN .bd-changelog-button .bd-icon {
+	width: 30px !important;
+	height: 30px !important;
+	margin-top: 5px;
+	margin-left: 10px;
+	fill: transparent;
+	background: rgb(250, 250, 250);
+	-webkit-mask: url(https://uxwing.com/wp-content/themes/uxwing/download/education-school/notebook-icon.svg) center/contain no-repeat;
+}
+
+.sidebar-nqHbhN .bd-changelog-button::after {
+	content: 'Change Log';
+	padding-left: 15px;
+	padding-top: 10px;
+	position: absolute;
+	color: var(--interactive-normal);
+	font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+/* bottom */
 .sidebar-nqHbhN .side-2ur1Qk .socialLinks-3ywLUf {
 	margin-top: 50px;
 	display: var(--settings-part-social);
@@ -122,7 +189,7 @@ STILL IN DEVELOPMENT
 
 .sidebar-nqHbhN .side-2ur1Qk .socialLinks-3ywLUf svg {
 	color: rgba(250, 250, 250, 0.3);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
 .sidebar-nqHbhN .side-2ur1Qk .socialLinks-3ywLUf svg:hover {
@@ -136,30 +203,33 @@ STILL IN DEVELOPMENT
 	pointer-events: none;
 }
 
-/* f. selected */
-#bd-settings-sidebar .ui-tab-bar-item, .side-2ur1Qk .item-3XjbnG {
+/* selected */
+#bd-settings-sidebar .ui-tab-bar-item, .side-2ur1Qk .item-3XjbnG, .sidebar-nqHbhN .bd-changelog-button {
 	transition: all .2s ease-in-out;
 	border-radius: 2px;
 	margin-top: 5px;
 }
 
-#bd-settings-sidebar .ui-tab-bar-item:hover, .side-2ur1Qk .item-3XjbnG:hover {
+#bd-settings-sidebar .ui-tab-bar-item:hover, .side-2ur1Qk .item-3XjbnG:hover, .sidebar-nqHbhN .bd-changelog-button:hover {
 	background-color: rgba(0, 0, 0, 0.5) !important;
 	box-shadow: 0px 0px 3px rgb(0, 0, 0) !important;
 	border-radius: 2px;
 	position: relative;
-	padding-left: 40px;
+	padding-left: 20px;
 }
 
 .side-2ur1Qk .item-3XjbnG[style*="color: rgb(114, 137, 218)"] {
 	color: var(--interactive-normal) !important;
 }
 
-div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item:hover, div[aria-label=GUILD_SETTINGS] .side-2ur1Qk .item-3XjbnG:hover {
+div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item:hover,
+div[aria-label=GUILD_SETTINGS] .side-2ur1Qk .item-3XjbnG:hover {
 	padding-left: 15px;
 }
 
-#bd-settings-sidebar .ui-tab-bar-item.selected, .side-2ur1Qk .item-3XjbnG[style*="background-color: rgb(114, 137, 218)"], .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG {
+#bd-settings-sidebar .ui-tab-bar-item.selected,
+.side-2ur1Qk .item-3XjbnG[style*="background-color: rgb(114, 137, 218)"],
+.side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG {
 	background-color: rgba(0, 0, 0, .5) !important;
 	box-shadow: 0px 0px 3px rgb(0, 0, 0) !important;
 	padding-left: 40px;
@@ -171,11 +241,16 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item:hover, div[
 	padding-left: 15px;
 }
 
-div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, div[aria-label=GUILD_SETTINGS] .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG, div[aria-label=GUILD_SETTINGS] .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG {
+div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected,
+div[aria-label=GUILD_SETTINGS] .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG,
+div[aria-label=GUILD_SETTINGS] .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG {
 	padding-left: 25px;
 }
 
-#bd-settings-sidebar .ui-tab-bar-item.selected::after, .side-2ur1Qk .item-3XjbnG[style*="background-color: rgb(114, 137, 218)"]::after, .side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after, .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after {
+#bd-settings-sidebar .ui-tab-bar-item.selected::after,
+.side-2ur1Qk .item-3XjbnG[style*="background-color: rgb(114, 137, 218)"]::after,
+.side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after,
+.topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -183,7 +258,7 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	height: 100%;
 	width: 5px;
 	border-radius: 0px;
-	background: linear-gradient(to bottom right, rgb(var(--settings-color-accents)), rgba(var(--settings-color-accents), 0.3));
+	background: linear-gradient(to bottom right, rgb(var(--settings-color-accents)), rgba(var(--settings-color-accents2), 0.3));
 	z-index: 1;
 }
 
@@ -196,6 +271,9 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 /* ####################[ Content ]#################### */
 .contentRegion-3HkfJJ {
 	flex: 1 1 100%;
+	--status-red-500: rgb(250, 0, 0);
+	--brand-500: rgb(var(--settings-color-accents));
+	--background-modifier-accent: rgb(40, 40, 40);
 }
 
 .contentColumn-1C7as6,
@@ -203,10 +281,10 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	max-width: 95% !important;
 }
 
-/* a. close */
+/* close */
 .contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma {
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
 .contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .keybind-13vtq8 {
@@ -219,34 +297,214 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	box-shadow: 0px 0px 2px rgb(250, 250, 250);
 }
 
-.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma, .contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma svg {
+.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma,
+.contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma svg {
 	border-radius: 3px;
 	border-color: rgba(250, 250, 250, 0.2);
 	color: rgba(250, 250, 250, 0.2);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
 .contentRegion-3HkfJJ .toolsContainer-25FL6V .tools-kIrEGr .container-O54IuJ .closeButton-PCZcma:hover svg {
 	color: rgba(250, 250, 250, 0.8);
 }
 
-/* ####################[ BD Themes and Plugins ]#################### */
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-settings-title {
-	color: rgb(250, 250, 250);
-}
-
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-button-title, .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-controls .bd-button, .contentRegion-3HkfJJ .contentColumn-1C7as6 .button-ZJ9ZzX {
-	background-color: rgba(var(--settings-color-content-background), 0.5);
+/* buttons */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-button-title,
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-controls .bd-button,
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .button-ZJ9ZzXm,
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .membershipDialogSwitchHouses-2bOt9w .membershipDialogSwitchHousesAction-O0eVhe,
+.contentRegion-3HkfJJ .button-f2h6uQ,
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP .fieldButton-14lHvK,
+.contentRegion-3HkfJJ .children-1xdcWE .changePasswordButton-3j5UVD,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-footer .bd-button,
+.contentRegion-3HkfJJ .shinyButton-2Q9MDB,
+.contentRegion-3HkfJJ .button-1U79Hu  {
+	background-color: rgb(var(--settings-color-content-background));
 	border: 2px solid rgba(var(--settings-color-accents), 0.3);
+	border-radius: 3px;
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
 	color: rgba(250, 250, 250, 0.5);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-button-title:hover, .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-controls .bd-button:hover, .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexChild-3PzYmX .container-1_EVMa .flex-2S1XBF .button-ZJ9ZzX:hover {
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-button-title:hover,
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card .bd-footer .bd-controls .bd-button:hover,
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexChild-3PzYmX .container-1_EVMa .flex-2S1XBF .button-ZJ9ZzX:hover,
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .membershipDialogSwitchHouses-2bOt9w .membershipDialogSwitchHousesAction-O0eVhe:hover,
+.contentRegion-3HkfJJ .button-f2h6uQ:hover,
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP .fieldButton-14lHvK:hover,
+.contentRegion-3HkfJJ .children-1xdcWE .changePasswordButton-3j5UVD:hover,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-footer .bd-button:hover,
+.contentRegion-3HkfJJ .shinyButton-2Q9MDB:hover,
+.contentRegion-3HkfJJ .button-1U79Hu:hover {
 	background-color: rgba(var(--settings-color-content-background), 1);
 	border: 2px solid rgba(var(--settings-color-accents), 1);
 	color: rgba(250, 250, 250, 1);
+}
+
+.contentRegion-3HkfJJ .button-f2h6uQ.colorRed-rQXKgM {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgba(250, 0, 0, 0.7);
+	color: rgba(250, 250, 250, 0.5);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ .button-f2h6uQ.colorRed-rQXKgM:hover {
+	border-color: rgba(250, 0, 0, 1);
+	color: rgba(250, 250, 250, 1);
+}
+
+/* ####################[ Whats New ]#################### */
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S  {
+	background-color: rgb(var(--settings-color-content-background));
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .flex-2S1XBF {
+	background-color: transparent;
+	border-radius: 0px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .flex-2S1XBF .heading-lg-semibold-2Z_RS3,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW  .bd-changelog-modal .flex-2S1XBF h1 {
+	color: rgb(250, 250, 250);
+	text-transform: uppercase;
+	text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .flex-2S1XBF .date-2tmzZM,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW  .bd-changelog-modal .date-2tmzZM {
+	color: rgba(250, 250, 250, 0.3);
+	text-transform: uppercase;
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .content-2hZxGK .added-mQcv9V.title-2ftWWc,
+.layerContainer-2v_Sit .bd-changelog-modal .content-2hZxGK .added-mQcv9V.title-2ftWWc {
+	color: rgb(var(--settings-color-accents));
+	text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .content-2hZxGK .added-mQcv9V.title-2ftWWc::after {
+	background-color: rgb(var(--settings-color-accents));
+	box-shadow: 0px 3px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .content-2hZxGK .fixed-cTX7Hp.title-2ftWWc,
+.layerContainer-2v_Sit .bd-changelog-modal .content-2hZxGK .fixed-cTX7Hp.title-2ftWWc {
+	color: rgba(var(--settings-color-accents), 0.2);
+	text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .content-2hZxGK .fixed-cTX7Hp.title-2ftWWc::after,
+.layerContainer-2v_Sit .bd-changelog-modal .content-2hZxGK .fixed-cTX7Hp.title-2ftWWc::after {
+	background-color: rgba(var(--settings-color-accents), 0.2);
+	box-shadow: 0px 3px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .content-2hZxGK .progress-1DcfFh.title-2ftWWc,
+.layerContainer-2v_Sit .bd-changelog-modal .content-2hZxGK .progress-1DcfFh.title-2ftWWc {
+	color: rgba(var(--settings-color-accents), 0.5);
+	text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .content-2hZxGK .progress-1DcfFh.title-2ftWWc::after {
+	background-color: rgba(var(--settings-color-accents), 0.5);
+	box-shadow: 0px 3px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .anchor-1MIwyf,
+.layerContainer-2v_Sit .bd-changelog-modal .anchor-1MIwyf {
+	color: rgb(var(--settings-color-accents));
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .modal-3Hrb0S .footer-1gMODG .text-xs-normal-3SiVjE,
+.layerContainer-2v_Sit .bd-changelog-modal .flex-2S1XBF .flexChild-3PzYmX {
+	color: rgb(250, 250, 250);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+/* ####################[ HypeSquad ]#################### */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ {
+	background-color: rgb(var(--settings-color-content-background));
+	border: 2px solid rgb(var(--settings-color-accents));
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.membershipDialogHouse2-2W27iJ::after {
+	filter: blur(3px);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- {
+	margin: -20px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .membershipDialogHeading-2YNliA {
+	color: rgb(250, 250, 250);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .membershipDialogHouseName-1yc2Ci {
+	color: rgb(var(--settings-color-accents));
+	text-shadow: 1px 1px 5px rgb(0, 0, 0);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .membershipDialogHouseDescription-2uFjjO {
+	color: rgba(250, 250, 250, 0.5);
+	text-shadow: 1px 3px 3px rgb(0, 0, 0);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .membershipDialogSwitchHouses-2bOt9w {
+	border: none;
+	color: rgb(250, 250, 250);
+	
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .membershipDialogSwitchHouses-2bOt9w .membershipDialogSwitchHousesAction-O0eVhe {
+	padding: 10px;
+	font-weight: 500;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .membershipDialog-2wAdpQ .membershipDialogContent-2TpsY- .houseLogoWrapper-1qaDCg {
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .features-6z-RVS .flex-2S1XBF {
+	border-radius: 3px;
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: none;
+	padding-bottom: 20px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .features-6z-RVS .flex-2S1XBF .description-22Sl9U {
+	color: rgba(250, 250, 250, 0.4);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .attendeeCTA-2etnq5 {
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	background-color: rgb(var(--settings-color-content-background));
+	border: none;
+	border-radius: 3px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .leaveButton-1Tg7l4 {
+	padding: 10px;
+}
+
+/* ####################[ BD Themes and Plugins ]#################### */
+/* links */
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-link-website {
+	color: rgb(var(--settings-color-accents));
+	text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-controls .bd-search-wrapper {
@@ -254,19 +512,11 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	width: 500px;
 }
 
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-controls .bd-controls-advanced .bd-addon-views .bd-view-button {
-	border-radius: 2px;
-}
-
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-controls .bd-controls-advanced .bd-addon-views .bd-view-button.selected {
-	background-color: rgb(var(--settings-color-accents));
-}
-
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card {
 	background-color: rgba(var(--settings-color-content-background), 0.5);
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border-radius: 1px;
-	transition: all .2s ease;
+	border-radius: 3px;
+	transition: all .2s ease-in-out;
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-addon-list .bd-addon-card:hover .bd-addon-header {
@@ -309,12 +559,32 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	margin-left: 10px;
 }
 
+.contentRegion-3HkfJJ #themes-tab .bd-controls-advanced .bd-button {
+	transition: all .2s ease-in-out;
+}
+
+.contentRegion-3HkfJJ #themes-tab .bd-controls-advanced .bd-button.selected {
+	background-color: rgba(var(--settings-color-accents), 0.5);
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 1px;
+}
+
+.contentRegion-3HkfJJ #themes-tab .bd-controls-advanced .bd-button.selected:hover {
+	background-color: rgba(var(--settings-color-accents), 1);
+}
+
+.contentRegion-3HkfJJ #themes-tab .bd-controls-advanced .bd-button:hover {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 1px;
+}
+
 /* ####################[ BD Updates ]#################### */
 .contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container {
 	background: rgba(var(--settings-color-accents), 0.1);
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
 	border-radius: 3px;
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
 .contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container:hover {
@@ -336,19 +606,18 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 
 .contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-setting-item .bd-setting-header .bd-setting-title {
 	color: rgba(250, 250, 250, 0.5);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
 .contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-setting-item .bd-setting-note {
 	margin-left: 10px;
 	color: rgba(250, 250, 250, 0.3);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
 .contentRegion-3HkfJJ #updates-tab .bd-settings-group .bd-settings-container .bd-setting-header .bd-filled-checkmark {
-	margin-left: 1130px;
-	margin-top: 35px;
-	position: absolute;
+	margin-right: 10px;
+	margin-top: 5px;
 	background-color: rgb(var(--settings-color-accents));
 	box-shadow: 0px 0px 3px rgb(0, 0, 0);
 }
@@ -365,17 +634,29 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 
 /* ####################[ BD Settings ]#################### */
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-settings-group  .bd-settings-container .bd-setting-item .bd-setting-note {
-	color: rgb(var(--settings-color-accents));
+	color: rgba(250, 250, 250, 0.3);
 }
 
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-select {
+	background-color: rgb(var(--settings-color-content-background));
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border: none;
+}
 
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-switch .bd-switch-body, .control-1fl03- .container-2nx-BQ {
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-select-options {
+	background-color: rgb(var(--settings-color-content-background));
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-switch .bd-switch-body,
+.control-1fl03- .container-2nx-BQ {
 	background-color: rgba(var(--settings-color-content-background), 0.5) !important;
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
 	border-radius: 5px;
 }
 
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-switch.bd-switch-checked, .container-2nx-BQ.checked-25WXMf {
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .bd-switch.bd-switch-checked,
+.container-2nx-BQ.checked-25WXMf {
 	background-color: rgb(var(--settings-color-accents)) !important;
 	border-radius: 5px;
 }
@@ -386,12 +667,12 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flex-2S1XBF .flexChild-3PzYmX .h5-2RwDNl {
-	color: rgb(var(--settings-color-accents));
+	color: rgb(250, 250, 250);
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexChild-3PzYmX .container-1_EVMa {
 	border-color: rgba(var(--settings-color-accents), 0.5);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexChild-3PzYmX .container-1_EVMa:hover {
@@ -432,7 +713,7 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 }
 
 /* ####################[ Registered Games ]#################### */
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.notDetected-M3Ghh2 {
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .flexCenter-1Mwsxg.activeGame-1OdxzI.notDetected-M3Ghh2 {
 	background-color: rgba(var(--settings-color-accents), 0.1);
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
 	border-radius: 3px;
@@ -464,19 +745,35 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	color: rgb(var(--settings-color-accents));
 }
 
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameName-zbZetm {
-	color: rgb(var(--settings-color-accents));
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	margin-top: 10px;
+	border: none;
 }
 
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameNameInput-2wbDJ9:hover, .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameNameInput-2wbDJ9:focus {
-	background-color: rgba(var(--settings-color-content-background), 1);
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameName-zbZetm {
+	color: rgb(var(--settings-color-accents));
+	margin-left: 15px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameNameInput-2wbDJ9:hover,
+.game-2f2vPC .gameNameLastPlayed-2hWoXJ .gameNameInput-2wbDJ9:focus {
+	background-color: rgb(var(--settings-color-content-background));
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
 	border-color: rgb(var(--settings-color-accents));
 	border-radius: 1px;
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .game-2f2vPC .lastPlayed-1jum9A {
-	color: rgba(250, 250, 250, 0.5)
+	color: rgba(250, 250, 250, 0.3);
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .overlayToggleIcon-1WRcQ9 {
+	margin-right: 10px;
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .overlayToggleIcon-1WRcQ9 .overlayToggleIconOff-ps4gGp .fill-297bdf {
@@ -495,11 +792,17 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	border-radius: 1px;
 	background-color: transparent;
 	border: 1px solid rgba(250, 0, 0, 0.5);
-	transition: all .2s ease;
+	transition: all .2s ease-in-out;
+	margin-top: 40px;
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .marginTop40-Q4o1tS .removeGame-3V7nss:hover {
 	border: 1px solid rgba(250, 0, 0, 1);
+}
+
+.contentRegion-3HkfJJ .contentColumn-1C7as6 .children-1xdcWE .nowPlayingAdd-3I4RbE .button-f2h6uQ {
+	padding: 10px;
+	margin-left: 10px;
 }
 
 /* ####################[ Activity Privacy ]#################### */
@@ -516,20 +819,6 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .warning-RBGtx2 .iconDiv-3ISDKO .icon-2fP4ae {
 	color: rgb(250, 0, 0);
-}
-
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .flexChild-3PzYmX .button-f2h6uQ {
-	background-color: rgba(var(--settings-color-content-background), 0.5);
-	border: 2px solid rgba(var(--settings-color-accents), 0.3);
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	color: rgba(250, 250, 250, 0.5);
-	transition: all .2s ease;
-}
-
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .flexChild-3PzYmX .button-f2h6uQ:hover {
-	background-color: rgba(var(--settings-color-content-background), 1);
-	border: 2px solid rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
 }
 
 .contentRegion-3HkfJJ .contentColumn-1C7as6 [aria-haspopup='listbox'] {
@@ -622,18 +911,6 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
-.contentRegion-3HkfJJ .cameraWrapper-3a7Ngv .button-f2h6uQ {
-	background-color: rgb(var(--settings-color-content-background));
-	border: 2px solid rgba(var(--settings-color-accents), 0.5);
-	color: rgba(250, 250, 250, 0.5);
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .cameraWrapper-3a7Ngv .button-f2h6uQ:hover {
-	border: 2px solid rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
-}
-
 .contentRegion-3HkfJJ .backgroundOption-2mIYjm .backgroundOptionInner-SSz19O {
 	background-color: rgb(var(--settings-color-content-background));
 	border-radius: 3px;
@@ -652,53 +929,12 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-.contentRegion-3HkfJJ .flex-2S1XBF .button-f2h6uQ {
-	background-color: rgb(var(--settings-color-content-background));
-	border: 2px solid rgba(var(--settings-color-accents), 0.7);
-	color: rgba(250, 250, 250, 0.5);
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border-radius: 3px;
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .flex-2S1XBF .button-f2h6uQ:hover {
-	border-color: rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
-}
-
-.contentRegion-3HkfJJ .button-f2h6uQ.colorRed-rQXKgM {
-	background-color: rgb(var(--settings-color-content-background));
-	border: 2px solid rgba(250, 0, 0, 0.7);
-	color: rgba(250, 250, 250, 0.5);
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border-radius: 3px;
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .button-f2h6uQ.colorRed-rQXKgM:hover {
-	border-color: rgba(250, 0, 0, 1);
-	color: rgba(250, 250, 250, 1);
-}
-
 /* ####################[ Availability ]#################### */
 .contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO {
 	background-color: rgb(var(--settings-color-content-background));
 	border: 2px solid rgb(var(--settings-color-accents));
 	border-radius: 3px;
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-}
-
-.contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO .previewHeader-3XkwNe .button-f2h6uQ {
-	background-color: rgb(var(--settings-color-content-background));
-	border: 2px solid rgba(var(--settings-color-accents), 0.5);
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	color: rgba(250, 250, 250, 0.5);
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO .previewHeader-3XkwNe .button-f2h6uQ:hover {
-	border-color: rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
 }
 
 .contentRegion-3HkfJJ .children-1xdcWE .preview-3k9WhO .previewHeader-3XkwNe .previewAvatars-5zC6sZ .wrapper-1VLyxH {
@@ -716,19 +952,6 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 .contentRegion-3HkfJJ .children-1xdcWE .checkbox-f1HnKB.checked-1pZh2h  {
 	--brand-experiment-500: rgb(var(--settings-color-accents));
 	--brand-experiment-400: transparent;
-}
-
-.contentRegion-3HkfJJ .children-1xdcWE .marginBottom20-315RVT .ttsPreviewWrapper-1d5bI6 .button-f2h6uQ {
-	background-color: rgb(var(--settings-color-content-background));
-	border: 2px solid rgba(var(--settings-color-accents), 0.7);
-	color: rgba(250, 250 , 250, 0.5);
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .children-1xdcWE .marginBottom20-315RVT .ttsPreviewWrapper-1d5bI6 .button-f2h6uQ:hover {
-	border-color: rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250 , 250, 1);
 }
 
 .contentRegion-3HkfJJ .children-1xdcWE .marginBottom20-315RVT .slider-1NC-Gf .markAbove-21dc11:nth-child(5) .markValue-2U_-UG {
@@ -757,7 +980,8 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	border-radius: 3px;
 }
 
-.contentRegion-3HkfJJ .noItemsCard-2V85P5 .gameIcon-1mDo1J.noItemsIcon-1rZlXZ, .noItemsCard-5EOcCl .gameIcon-1mDo1J.noItemsIcon-2OeOld {
+.contentRegion-3HkfJJ .noItemsCard-2V85P5 .gameIcon-1mDo1J.noItemsIcon-1rZlXZ,
+.noItemsCard-5EOcCl .gameIcon-1mDo1J.noItemsIcon-2OeOld {
 	color: rgb(var(--settings-color-accents));
 	background-color: transparent;
 }
@@ -773,7 +997,9 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	border-radius: 3px;
 }
 
-.contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .progressCircle-1pQMui, .contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .guildInfo-16ssyU .guildBoostingIcon-2B5iYK, .contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .gemWithLabel-9XSuaB {
+.contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .progressCircle-1pQMui,
+.contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .guildInfo-16ssyU .guildBoostingIcon-2B5iYK,
+.contentRegion-3HkfJJ .guildsSection-30CJxX .guilds-XTTuu3 .cardWrapper-1bSePP .gemWithLabel-9XSuaB {
 	color: rgb(var(--settings-color-accents));
 }
 
@@ -795,20 +1021,6 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	border-radius: 3px;
 }
 
-.contentRegion-3HkfJJ .wrapper-3Zq_cJ .button-f2h6uQ {
-	background-color: rgb(var(--settings-color-content-background));
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border: 2px solid rgba(var(--settings-color-accents), 0.7);
-	color: rgba(250, 250, 250, 0.5);
-	border-radius: 3px;
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .wrapper-3Zq_cJ .button-f2h6uQ:hover {
-	border-color: rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
-}
-
 /* ####################[ Nitro ]#################### */
 .contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA {
 	width: 1250px;
@@ -819,20 +1031,6 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	background-image: none;
 	margin: auto;
 	height: 250px;
-}
-
-.contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .shinyButton-2Q9MDB, .contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .button-1U79Hu {
-	background-color: rgb(var(--settings-color-content-background));
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border: 2px solid rgba(var(--settings-color-accents), 0.7);
-	color: rgba(250, 250, 250, 0.5);
-	transition: all .2s ease-in-out;
-	border-radius: 3px;
-}
-
-.contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .shinyButton-2Q9MDB:hover, .contentRegion-3HkfJJ .container-LUKdw8 .content-374sTA .hero-1aNo0v .heroButtons-357iJy .button-1U79Hu:hover {
-	border-color: rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
 }
 
 .contentRegion-3HkfJJ .container-LUKdw8 .featureGrid-SSlfD0 .feature-2IUcBI {
@@ -862,26 +1060,13 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	color: rgb(var(--settings-color-accents));
 }
 
-.contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .shinyButton-2Q9MDB, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .button-1U79Hu, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .shinyButton-2Q9MDB, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .button-1U79Hu {
-	background-color: rgb(var(--settings-color-content-background));
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border: 2px solid rgba(var(--settings-color-accents), 0.7);
-	color: rgba(250, 250, 250, 0.5);
-	border-radius: 3px;
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .shinyButton-2Q9MDB:hover, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshTier2Cta-2dN2zP .tier2Buttons-p_48oy .button-1U79Hu:hover, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .shinyButton-2Q9MDB:hover, .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .button-1U79Hu:hover {
-	border-color: rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
-}
-
 .contentRegion-3HkfJJ .container-LUKdw8 .marketingRefreshSectionTier1-1chtWC .perkList-1bla2U .perkListItemIcon-3Odm5d {
 	color: rgb(var(--settings-color-accents));
 }
 
 /* ####################[ Connected Accounts ]#################### */
-.contentRegion-3HkfJJ .children-1xdcWE .connectContainer-1hylYM, .contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j {
+.contentRegion-3HkfJJ .children-1xdcWE .connectContainer-1hylYM,
+.contentRegion-3HkfJJ .children-1xdcWE .connectionList-11Q_X- .connection-YOVI9j {
 	background-color: rgb(var(--settings-color-content-background));
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
 	border-radius: 3px;
@@ -1036,20 +1221,6 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	border-color: rgb(var(--settings-color-accents));
 }
 
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .button-f2h6uQ {
-	background-color: rgb(var(--settings-color-content-background));
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border: 2px solid rgba(var(--settings-color-accents), 0.7);
-	border-radius: 3px;
-	color: rgba(250, 250, 250, 0.5);
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .button-f2h6uQ:hover {
-	border: 2px solid rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
-}
-
 .contentRegion-3HkfJJ .contentColumn-1C7as6 .profileCustomizationSection-53kreU .customizationSection-IGy2fS .colorSwatch-2UxEuG .swatch-efj8wq {
 	border-radius: 3px;
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
@@ -1073,25 +1244,15 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	margin-top: 5px;
 }
 
+.premiumFeatureBorder-1i95si {
+	background-color: red;
+}
+
 /* ####################[ My Account ]#################### */
 .contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- {
 	background-color: rgb(var(--settings-color-content-background));
 	box-shadow: 0px 0px 5px rgb(0, 0, 0);
 	border-radius: 3px;
-}
-
-.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .userInfo-regn9W .button-f2h6uQ, .contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP .fieldButton-14lHvK, .contentRegion-3HkfJJ .children-1xdcWE .changePasswordButton-3j5UVD {
-	background-color: rgb(var(--settings-color-content-background));
-	box-shadow: 0px 0px 5px rgb(0, 0, 0);
-	border: 2px solid rgba(var(--settings-color-accents), 0.7);
-	color: rgba(250, 250, 250, 0.5);
-	border-radius: 3px;
-	transition: all .2s ease-in-out;
-}
-
-.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .userInfo-regn9W .button-f2h6uQ:hover, .contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP .fieldButton-14lHvK:hover, .contentRegion-3HkfJJ .children-1xdcWE .changePasswordButton-3j5UVD:hover {
-	border-color: rgba(var(--settings-color-accents), 1);
-	color: rgba(250, 250, 250, 1);
 }
 
 .contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .userInfo-regn9W .containerWithContent-2_V0PM .clickable-28QF7i {
@@ -1115,3 +1276,52 @@ div[aria-label=GUILD_SETTINGS] #bd-settings-sidebar .ui-tab-bar-item.selected, d
 	border-radius: 0px;
 }
 
+.contentRegion-3HkfJJ .children-1xdcWE .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP .text-md-normal-304U3g .button-f2h6uQ {
+	padding: 5px;
+	margin-left: 10px;
+}
+
+.contentRegion-3HkfJJ .userSettingsSecurity-2kODPN .children-1xdcWE:nth-child(2) .button-f2h6uQ:nth-child(2) {
+	margin-left: 15px;
+}
+
+/* ####################[ Theme | Plugin Broke ]#################### */
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 10px rgb(0, 0, 0);
+	border-radius: 3px;
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-header,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-footer {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	background-color: transparent;
+	border-radius: 0px;
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-header .bd-tab-bar .bd-tab-item {
+	background-color: rgb(var(--settings-color-content-background));
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	border-radius: 3px;
+	text-transform: uppercase;
+	color: rgb(250, 250, 250);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-header .bd-tab-bar .bd-tab-item.selected {
+	color: rgb(var(--settings-color-accents));
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-content .bd-addon-error.collapsed,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-content .bd-addon-error.expanded {
+	background-color: rgb(var(--settings-color-content-background));
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-content .bd-addon-error.collapsed .bd-addon-error-header .bd-addon-error-header-inner .bd-addon-error-details .colorHeaderSecondary-2mxIhA,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-content .bd-addon-error.collapsed .bd-addon-error-header .detailsIcon-2NtTO9,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-content .bd-addon-error.expanded .bd-addon-error-header .bd-addon-error-header-inner .bd-addon-error-details .colorHeaderSecondary-2mxIhA,
+.layerContainer-2v_Sit .layer-1Ixpg3 .focusLock-2tveLW .bd-error-modal .bd-error-modal-content .bd-addon-error.expanded .bd-addon-error-header .detailsIcon-2NtTO9 {
+	color: rgba(250, 250, 250, 0.4);
+}
