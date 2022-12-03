@@ -10,6 +10,7 @@ Update Log:
 		- Remaked Change Log button from BetterDiscord.
 		- Added title.
 		- Adjusted animation on hover to sidebar items.
+		- Moved variables to body to avoid changing anything outside settings.
 		- Redjusted amount of code to edit specific elements.
 
 */
