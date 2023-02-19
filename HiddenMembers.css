@@ -1,0 +1,35 @@
+/*
+
+Addon: HiddenMembers
+Author: Kurou
+Website: https://kinmokusei.dev/
+
+STILL IN DEVELOPMENT
+*/
+
+.base-2jDfDU .content-1SgpWY .chat-2ZfjoI .content-1jQy2l .container-2o3qEW {
+    width: 55px;
+    transition: all .3s ease-in-out;
+}
+
+.base-2jDfDU .content-1SgpWY .chat-2ZfjoI .content-1jQy2l .container-2o3qEW .membersGroup-2eiWxl {
+    display: none;
+}
+
+.base-2jDfDU .content-1SgpWY .chat-2ZfjoI .content-1jQy2l .container-2o3qEW .membersWrap-3NUR2t .members-3WRCEx .member-2gU6Ar {
+    width: 47px;
+    transition: all .3s ease-in-out;
+}
+
+.base-2jDfDU .content-1SgpWY .chat-2ZfjoI .content-1jQy2l .container-2o3qEW:hover {
+    width: 250px;
+}
+
+.base-2jDfDU .content-1SgpWY .chat-2ZfjoI .content-1jQy2l .container-2o3qEW:hover .membersGroup-2eiWxl {
+    display: block;
+    transition: all .2s ease-in-out;
+}
+
+.base-2jDfDU .content-1SgpWY .chat-2ZfjoI .content-1jQy2l .container-2o3qEW:hover .membersWrap-3NUR2t .members-3WRCEx .member-2gU6Ar {
+    width: 95%;
+}
