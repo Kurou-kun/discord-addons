@@ -1,11 +1,13 @@
-/*
-
-Addon: Better Chat
-Author: Kurou
-Website: https://kinmokusei.dev/
-
-STILL IN DEVELOPMENT
-*/
+/**
+ * @name BetterChat
+ * @description Completly changes look of discord default chat
+ * @author Kurou#7608
+ * @version 1.0.0
+ * @authorId 385878744612732930
+ * @website https://kinmokusei.dev/
+ * @source https://github.com/Kurou-kun/discord-addons
+ * @updateUrl https://kurou-kun.github.io/discord-addons/BetterChat.theme.css
+ */
 
 :root {
 	/* Message */

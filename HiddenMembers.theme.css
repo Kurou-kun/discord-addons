@@ -1,11 +1,13 @@
-/*
-
-Addon: HiddenMembers
-Author: Kurou
-Website: https://kinmokusei.dev/
-
-STILL IN DEVELOPMENT
-*/
+/**
+ * @name HiddenMembers
+ * @description Repositions members to show on hover only
+ * @author Kurou#7608
+ * @version 1.0.0
+ * @authorId 385878744612732930
+ * @website https://kinmokusei.dev/
+ * @source https://github.com/Kurou-kun/discord-addons
+ * @updateUrl https://kurou-kun.github.io/discord-addons/HiddenMembers.theme.css
+ */
 
 .base-2jDfDU .content-1SgpWY .chat-2ZfjoI .content-1jQy2l .container-2o3qEW {
     width: 55px !important;

@@ -1,29 +1,13 @@
-/*
-
-Addon: Better Settings
-Author: Kurou
-Website: https://kinmokusei.dev/
-
-Credits:
-	Sidebar items idea, content width adjust and category styling by [I forgot the name, so i will fill it later]
-	Sidebar items icons by mwittrien
-
-Update Log:
-	03.12.2022 
-		- Fixed buttons.
-		- Remaked Change Log button from BetterDiscord.
-		- Added title.
-		- Adjusted animation on hover to sidebar items.
-		- Moved variables to body to avoid changing anything outside settings.
-		- Redjusted amount of code to edit specific elements.
-
-	09.12.2022
-		- Fixed some buttons padding and text colors.
-		- Edited server settings.
-		- Edited channel settings.
-		- Changed text badge.
-		- Combiend some code to make it smaller.
-*/
+/**
+ * @name BetterSettings
+ * @description Completly changes look of discord default settings
+ * @author Kurou#7608
+ * @version 1.0.0
+ * @authorId 385878744612732930
+ * @website https://kinmokusei.dev/
+ * @source https://github.com/Kurou-kun/discord-addons
+ * @updateUrl https://kurou-kun.github.io/discord-addons/BetterSettings.theme.css
+ */
 
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
@@ -121,6 +105,7 @@ Update Log:
 	display: var(--settings-part-title);
 	background: linear-gradient(to right, rgba(var(--settings-color-accents2), 0.2), rgb(var(--settings-color-accents)), rgb(var(--settings-color-accents2), 0.2));
 	-webkit-background-clip: text;
+	background-clip: text;
 	color: transparent;
 	overflow: hidden;
 	text-shadow: 1px 1px 10px rgb(0, 0, 0);
@@ -212,6 +197,7 @@ Update Log:
 	fill: transparent;
 	background: rgb(250, 250, 250);
 	-webkit-mask: url(https://uxwing.com/wp-content/themes/uxwing/download/education-school/notebook-icon.svg) center/contain no-repeat;
+	mask: url(https://uxwing.com/wp-content/themes/uxwing/download/education-school/notebook-icon.svg) center/contain no-repeat;
 }
 
 .sidebar-nqHbhN .bd-changelog-button::after {
