@@ -25,92 +25,92 @@ Website https://kinmokusei.dev/
 }
 
 /* Profile | Modal Popup */
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ {
     border-radius: 3px !important;
     background-color: rgb(var(--color-background2)) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY {
     background: linear-gradient(to bottom, rgb(var(--color-background)) 60px, rgb(var(--color-background2))) !important;
     box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5) !important;
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY {
     border-top-right-radius: 3px !important;
     border-top-left-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga {
     background-color: rgb(var(--color-background2)) !important;
     border-radius: var(--roundness) !important;
     transition: transform .2s ease-in-out !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga:hover {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga:hover {
     transform: scale(1.1) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga svg path {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga svg path {
     fill: rgb(var(--color-hidden)) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY circle {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .bannerSVGWrapper-qc0szY circle {
     display: none !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .avatarWrapper-3y0KZ1,
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .avatarWrapper-3y0KZ1 * {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .avatarWrapper-3y0KZ1,
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .avatarWrapper-3y0KZ1 * {
     border-radius: var(--roundness) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .avatarWrapper-3y0KZ1 {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .avatarWrapper-3y0KZ1 {
     box-shadow: 0px 0px 20px rgb(0, 0, 0) !important;
     background-color: rgb(var(--color-background2)) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .profileBadges-31rDHI {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .profileBadges-31rDHI {
     background-color: rgb(var(--color-background2), 0.5) !important;
     box-shadow: 0px 0px 3px rgb(0, 0, 0, 0.3) !important;
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userProfileInner-3F03PX .wrapper-400BN2 .banner-2JvDVu {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userProfileInner-3F03PX .wrapper-400BN2 .banner-2JvDVu {
     background: linear-gradient(90deg, rgb(var(--color-accent)), rgb(var(--color-accent2)) 50%, rgb(var(--color-accent))) !important;
     border-top-right-radius: 3px !important;
     border-top-left-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userPopoutOverlayBackground-dKOOda {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userPopoutOverlayBackground-dKOOda {
     box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5) !important;
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY .userPopoutOverlayBackground-dKOOda {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY .userPopoutOverlayBackground-dKOOda {
     background: linear-gradient(to bottom, rgb(var(--color-background2)) 60px, rgb(var(--color-background))) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY .userPopoutOverlayBackground-dKOOda .section-3FmfOT .role-2TIOKu {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY .userPopoutOverlayBackground-dKOOda .section-3FmfOT .role-2TIOKu {
     background-color: rgb(var(--color-background2)) !important;
     box-shadow: 0px 0px 2px rgb(0, 0, 0, 0.5) !important;
     border-radius: var(--roundness) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userPopoutOverlayBackground-dKOOda .section-3FmfOT .inputWrapper-2K8ds1 {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userPopoutOverlayBackground-dKOOda .section-3FmfOT .inputWrapper-2K8ds1 {
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY .userPopoutOverlayBackground-dKOOda .section-3FmfOT .inputWrapper-2K8ds1 {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userProfileInnerThemedNonPremium-1gT-zY .userPopoutOverlayBackground-dKOOda .section-3FmfOT .inputWrapper-2K8ds1 {
     border-color: rgb(var(--color-background2)) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .userTag-PXLYzP .bot-XvK26D {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .userTag-PXLYzP .bot-XvK26D {
     background-color: rgb(var(--color-background)) !important;
     border-radius: var(--roundness) !important;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-ejjZWC,
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-35nmN9 {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-ejjZWC,
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-35nmN9 {
     background-color: rgb(var(--color-background)) !important;
     color: rgb(var(--color-hidden)) !important;
     border-radius: var(--roundness) !important;
@@ -118,122 +118,122 @@ Website https://kinmokusei.dev/
     background: none;
 }
 
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-ejjZWC:hover,
-.layerContainer-2v_Sit .layer-2aCOJ3 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-35nmN9:hover {
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-ejjZWC:hover,
+.layerContainer-2lfOPe .layer-2BGhQ8 .userPopoutOuter-3AVBmJ .section-3FmfOT .button-35nmN9:hover {
     transform: scale(1.05) !important;
 }
 
 /* Profile | Modal Focused */
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T {
     border-radius: 3px !important;
     height: 800px !important;
     width: 1000px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileModalInner-3fh3QA {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileModalInner-3fh3QA {
     width: 1000px !important;
     height: 800px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY {
     background: linear-gradient(to bottom, rgb(var(--color-background)) 60px, rgb(var(--color-background2))) !important;
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY circle {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY circle {
     display: none !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY {
     border-top-right-radius: 3px !important;
     border-top-left-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga {
     background-color: rgb(var(--color-background2)) !important;
     border-radius: var(--roundness) !important;
     transition: transform .2s ease-in-out !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga:hover {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga:hover {
     transform: scale(1.1) !important;
 }
 
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileInnerThemedWithBanner-2624Yx .topSection-1Khgkv .bannerSVGWrapper-qc0szY .premiumIconWrapper-yyGDql .base-3IDx3L[style] {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileInnerThemedWithBanner-2624Yx .topSection-1Khgkv .bannerSVGWrapper-qc0szY .premiumIconWrapper-yyGDql .base-3IDx3L[style] {
     background-color: rgb(var(--color-background)) !important;
     border-radius: var(--roundness) !important;
 }
 
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga svg path {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .bannerSVGWrapper-qc0szY .pencilContainer-11Kuga svg path {
     fill: rgb(var(--color-hidden)) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .avatar-1YsFQ1,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .avatar-1YsFQ1 * {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .avatar-1YsFQ1,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .avatar-1YsFQ1 * {
     border-radius: var(--roundness) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .avatar-1YsFQ1 {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .avatar-1YsFQ1 {
     box-shadow: 0px 0px 20px rgb(0, 0, 0) !important;
     background-color: rgb(var(--color-background2)) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .badgeList-2pMvZX {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .badgeList-2pMvZX {
     background-color: rgb(var(--color-background2), 0.5) !important;
     box-shadow: 0px 0px 3px rgb(0, 0, 0, 0.3) !important;
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .bannerSVGWrapper-qc0szY {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .bannerSVGWrapper-qc0szY {
     max-height: 400px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileModalOverlayBackground-8p3-eU {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileModalOverlayBackground-8p3-eU {
     border-radius: 3px !important;
     box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5) !important;
     height: 90% !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY .userProfileModalOverlayBackground-8p3-eU {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY .userProfileModalOverlayBackground-8p3-eU {
     background: linear-gradient(to bottom, rgb(var(--color-background2)) 60px, rgb(var(--color-background))) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE {
     flex: 0 1 100% !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .connectedAccounts-1HaiEx .connectedAccountContainer-2TWiXT {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .connectedAccounts-1HaiEx .connectedAccountContainer-2TWiXT {
     border-radius: 3px !important;
     background-color: rgb(var(--color-background2), 0.5) !important;
     border-color: rgb(var(--color-background2), 0.5) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .connectedAccounts-1HaiEx .connectedAccountContainer-2TWiXT .flowerStarContainer-1QeD-L .flowerStar-2tNFCR path {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .connectedAccounts-1HaiEx .connectedAccountContainer-2TWiXT .flowerStarContainer-1QeD-L .flowerStar-2tNFCR path {
     fill: rgb(var(--color-accent)) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .button-ejjZWC,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .additionalActionsIcon-1IPuHI,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .button-TGAkj4 {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .button-ejjZWC,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .additionalActionsIcon-1IPuHI,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .button-TGAkj4 {
     background-color: rgb(var(--color-background2)) !important;
     border-radius: var(--roundness) !important;
     color: rgb(var(--color-hidden)) !important;
     transition: transform .2s ease-in-out !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .additionalActionsIcon-1IPuHI {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .additionalActionsIcon-1IPuHI {
     padding: 4px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .button-ejjZWC:hover,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .topSection-1Khgkv .additionalActionsIcon-1IPuHI:hover,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .button-TGAkj4:hover {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .button-ejjZWC:hover,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .topSection-1Khgkv .additionalActionsIcon-1IPuHI:hover,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .button-TGAkj4:hover {
     transform: scale(1.05) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee {
     background-color: rgb(var(--color-background2), 0.5) !important;
     margin-top: 5px !important;
     margin-left: 10px !important;
@@ -241,17 +241,17 @@ Website https://kinmokusei.dev/
     box-shadow: 0px 0px 2px rgb(0, 0, 0, 0.5) !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .bar-1GpknY {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .bar-1GpknY {
     background-color: rgb(var(--color-background2)) !important;
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .barInner-3dHef4 {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .activityProfileV2-1N7pee .body-u1Y8uL .barInner-3dHef4 {
     background-color: rgb(var(--color-accent)) !important;
     border-radius: 3px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .listRow-Y5zoF8 {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .listRow-Y5zoF8 {
     background-color: rgb(var(--color-background2), 0.5) !important;
     box-shadow: 0px 0px 3px rgb(0, 0, 0, 0.5) !important;
     border-radius: var(--roundness) !important;
@@ -259,23 +259,23 @@ Website https://kinmokusei.dev/
     transition: margin-left .2s ease-in-out !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .body-_QAKrE .listRow-Y5zoF8:hover {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .body-_QAKrE .listRow-Y5zoF8:hover {
     margin-left: 20px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .infoScroller-3MqKC5::-webkit-scrollbar,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .listScroller-XCVa1H::-webkit-scrollbar {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .infoScroller-3MqKC5::-webkit-scrollbar,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .listScroller-XCVa1H::-webkit-scrollbar {
     width: 6px !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY .infoScroller-3MqKC5::-webkit-scrollbar-thumb,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY .listScroller-XCVa1H::-webkit-scrollbar-thumb {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY .infoScroller-3MqKC5::-webkit-scrollbar-thumb,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileInnerThemedNonPremium-1gT-zY .listScroller-XCVa1H::-webkit-scrollbar-thumb {
     background-color: rgb(var(--color-accent)) !important;
     border-radius: 0 !important;
 }
 
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileInnerThemedWithBanner-2624Yx .infoScroller-3MqKC5::-webkit-scrollbar-thumb,
-.layerContainer-2v_Sit .layer-1Ixpg3 .userProfileModalOuter-1FYL8T .userProfileInnerThemedWithBanner-2624Yx .listScroller-XCVa1H::-webkit-scrollbar-thumb {
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileInnerThemedWithBanner-2624Yx .infoScroller-3MqKC5::-webkit-scrollbar-thumb,
+.layerContainer-2lfOPe .layer-fP3xEz .userProfileModalOuter-1FYL8T .userProfileInnerThemedWithBanner-2624Yx .listScroller-XCVa1H::-webkit-scrollbar-thumb {
     background-color: var(--profile-gradient-secondary-color) !important;
     border-radius: 0 !important;
 }
