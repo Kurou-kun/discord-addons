@@ -3,7 +3,7 @@
 Name: BetterChat
 Type: Addon
 Author: Kurou#7608
-Version 1.0.1
+Version 1.0.2
 Website https://kinmokusei.dev/
 
 */
@@ -121,17 +121,18 @@ Website https://kinmokusei.dev/
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3.mentioned-Tre-dv.groupStart-3Mlgv1::before {
     content: '' !important;
     position: absolute !important;
-    background-color: rgb(250, 0, 0) !important;
+    background: linear-gradient(to top right, rgb(250, 0, 0, 0.7), transparent 70%) !important;
     width: 20px !important;
     height: 20px !important;
     z-index: -1 !important;
     top: 10px !important;
-    left: -10px !important;
+    left: -12px !important;
     transform: rotate(45deg) !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .mention,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .channelMention {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .channelMention,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .roleMention-11Aaqi {
     background-color: rgb(var(--color-background)) !important;
     color: rgb(var(--color-normal)) !important;
     border-radius: 3px !important;
@@ -139,7 +140,8 @@ Website https://kinmokusei.dev/
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .mention:hover,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .channelMention:hover {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .channelMention:hover,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .roleMention-11Aaqi:hover {
     color: rgb(var(--color-accent)) !important;
 }
 
@@ -151,7 +153,7 @@ Website https://kinmokusei.dev/
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3.ephemeral-2nDdnn.groupStart-3Mlgv1::before {
     content: '' !important;
     position: absolute !important;
-    background-color: rgb(0, 0, 250) !important;
+    background: linear-gradient(to top right, rgb(0, 0, 250, 0.7), transparent 70%) !important;
     width: 20px !important;
     height: 20px !important;
     z-index: -1 !important;
@@ -294,37 +296,37 @@ Website https://kinmokusei.dev/
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh {
-    background-color: rgb(var(--color-background2));
-    border-radius: 3px;
+    background-color: rgb(var(--color-background2)) !important;
+    border-radius: 3px !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY,
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after {
-    background-color: rgb(var(--color-background));
+    background-color: rgb(var(--color-background)) !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317,
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before,
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
-    background-color: rgb(var(--color-accent));
+    background-color: rgb(var(--color-accent)) !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before {
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px !important;
+    border-bottom-left-radius: 2px !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after,
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317 .mediaBarGrabber-FvJKJg {
-    background-color: rgb(var(--color-accent2));
-    border-radius: var(--roundness);
+    background-color: rgb(var(--color-accent2)) !important;
+    border-radius: var(--roundness) !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .embedFull-1HGV2S {
@@ -453,8 +455,85 @@ Website https://kinmokusei.dev/
     color: rgb(var(--color-accent)) !important;
 }
 
+/* Invites */
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j {
+    background-color: rgb(var(--color-background)) !important;
+    border-radius: 3px !important;
+    max-width: 100% !important;
+    height: 300px !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j .inviteSplash-2nkLRX {
+    height: 200px !important;
+    background-color: rgb(var(--color-background)) !important;
+    border-radius: 0px !important;
+    border-top-right-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j .header-3anOjb {
+    margin-top: -5px !important;
+    margin-left: -5px !important;
+    letter-spacing: 2px !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j .content-1r-J1r .headerLine-2AIsUj .icon-1zKOXL {
+    border-radius: var(--roundness) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j .content-1r-J1r .headerLine-2AIsUj .inviteDestination-1rM5rX .infoBadge-3DRXxE .flowerStar-2tNFCR {
+    color: rgb(var(--color-accent2), 0.5) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j .content-1r-J1r .headerLine-2AIsUj .guildDetail-3EJhW_ .statusWrapper-3CHb8F .status-JIDx3x {
+    border-radius: var(--roundness) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j .content-1r-J1r .headerLine-2AIsUj .guildDetail-3EJhW_ .statusWrapper-3CHb8F .status-JIDx3x.statusOnline-Iw3r2o {
+    background-color: rgb(var(--status-online)) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1HIH0j .content-1r-J1r .headerLine-2AIsUj .guildDetail-3EJhW_ .statusWrapper-3CHb8F .status-JIDx3x.statusOffline-2R-ArP {
+    background-color: rgb(var(--status-offline)) !important;
+}
+
 /* Special */
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .scrollbarGhostHairline-2LpzZ9 {
     background-color: rgb(var(--color-background)) !important;
     border-radius: 3px !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .inline {
+    background-color: rgb(var(--color-background)) !important;
+    border-radius: 3px !important;
+}
+
+/* ImageUtilities */
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .imageDetails-1t6Zms .anchor-1X4H4q {
+    color: rgb(var(--color-hidden)) !important;
+    transition: color .1s ease-in-out !important;
+    padding-top: 2px !important;
+    padding-left: 5px !important;
+    text-decoration: none !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .imageDetails-1t6Zms .anchor-1X4H4q:hover {
+    color: rgb(var(--color-accent)) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .imageDetails-1t6Zms span {
+    color: rgb(var(--color-hidden)) !important;
+    padding-top: 3px !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .imageDetails-1t6Zms .cursorPointer-B3uwDA {
+    background-color: rgb(var(--color-background)) !important;
+    color: rgb(var(--color-hidden)) !important;
+    border-radius: var(--roundness) !important;
+    padding: 2px !important;
+    transition: transform .2s ease-in-out !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .imageDetails-1t6Zms .cursorPointer-B3uwDA:hover {
+    transform: scale(1.05) !important;
 }
