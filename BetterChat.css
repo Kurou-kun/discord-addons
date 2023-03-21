@@ -3,7 +3,7 @@
 Name: BetterChat
 Type: Addon
 Author: Kurou#7608
-Version 1.0.0
+Version 1.0.1
 Website https://kinmokusei.dev/
 
 */
@@ -56,16 +56,18 @@ Website https://kinmokusei.dev/
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 {
-    background-color: rgb(var(--color-background2)) !important;
+    background-color: rgb(var(--color-background2), 0.5) !important;
+    backdrop-filter: blur(2px);
     border-radius: 0 !important;
     margin-left: 80px !important;
-    padding-left: 5px !important
+    padding-left: 5px !important;
+    padding-right: 10px !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3.groupStart-3Mlgv1::before {
     content: '' !important;
     position: absolute !important;
-    background-color: rgb(var(--color-background2)) !important;
+    background: linear-gradient(to top right, rgb(var(--color-background2), 0.7) 50%, transparent) !important;
     width: 20px !important;
     height: 20px !important;
     z-index: -1 !important;
@@ -92,7 +94,7 @@ Website https://kinmokusei.dev/
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3.groupStart-3Mlgv1 .repliedMessage-3Z6XBG::before {
     border-top: 5px solid !important;
     border-left: 5px solid !important;
-    border-color: rgb(var(--color-background2)) !important;
+    border-color: rgb(var(--color-background2), 0.7) !important;
     border-radius: 0 !important;
     margin-top: -9px !important;
     margin-bottom: -15px !important;
@@ -128,6 +130,19 @@ Website https://kinmokusei.dev/
     transform: rotate(45deg) !important;
 }
 
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .mention,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .channelMention {
+    background-color: rgb(var(--color-background)) !important;
+    color: rgb(var(--color-normal)) !important;
+    border-radius: 3px !important;
+    transition: color .1s ease-in-out !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .mention:hover,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .markup-eYLPri .channelMention:hover {
+    color: rgb(var(--color-accent)) !important;
+}
+
 /* Message Bot */
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3.ephemeral-2nDdnn {
     border-left: 3px solid rgb(0, 0, 250) !important;
@@ -143,6 +158,13 @@ Website https://kinmokusei.dev/
     top: 10px !important;
     left: -10px !important;
     transform: rotate(45deg) !important;
+}
+
+/* Message Edit */
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .scrollableContainer-15eg7h {
+    background-color: rgb(var(--color-background2)) !important;
+    box-shadow: 0px 0px 5px rgb(var(--color-accent), 0.3) !important;
+    border-radius: 3px !important;
 }
 
 /* Attachments */
@@ -176,7 +198,7 @@ Website https://kinmokusei.dev/
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .attachment-1PZZB2 .icon-1KCy88[title="archive"] {
-    content: url('https://kurou-kun.github.io/ashuramaru-theme/zip.png') !important;
+    content: url('https://kurou-kun.github.io/discord-addons/source/zip.png') !important;
     width: 40px !important;
     height: 40px !important;
 }
@@ -187,7 +209,7 @@ Website https://kinmokusei.dev/
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioMetadata-1Hrt8T::before {
-    background-image: url('https://kurou-kun.github.io/ashuramaru-theme/music.png') !important;
+    background-image: url('https://kurou-kun.github.io/discord-addons/source/music.png') !important;
     width: 40px !important;
     height: 40px !important;
 }
@@ -271,6 +293,40 @@ Website https://kinmokusei.dev/
     transform: none !important;
 }
 
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh {
+    background-color: rgb(var(--color-background2));
+    border-radius: 3px;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after {
+    background-color: rgb(var(--color-background));
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
+    background-color: rgb(var(--color-accent));
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317 .mediaBarGrabber-FvJKJg {
+    background-color: rgb(var(--color-accent2));
+    border-radius: var(--roundness);
+}
+
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .embedFull-1HGV2S {
     background-color: rgb(var(--color-background)) !important;
     border-top-right-radius: 3px !important;
@@ -315,6 +371,11 @@ Website https://kinmokusei.dev/
     border-radius: 0 !important;
 }
 
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .embedFull-1HGV2S .embedSuppressButton-1rZHq6 {
+    margin-right: 23px !important;
+    margin-top: 5px !important;
+}
+
 /* Upload */
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .attachment-1PZZB2 {
     background-color: rgb(var(--color-background2)) !important;
@@ -350,6 +411,18 @@ Website https://kinmokusei.dev/
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .buttonContainer-1502pf .wrapper-2vIMkT .button-3bklZh.selected-69H4ua {
     background-color: rgb(var(--color-background2), 0.5) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .hoverButtonGroup-2yZIzC {
+    background-color: rgb(var(--color-background2)) !important;
+    border-radius: 3px !important;
+    margin-top: 10px !important;
+    margin-right: -10px !important;
+    outline: none !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .hoverButtonGroup-2yZIzC .hoverButton-36QWJk:hover {
+    background-color: rgb(var(--color-background), 0.5) !important;
 }
 
 /* Reactions */
