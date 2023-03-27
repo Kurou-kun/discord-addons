@@ -3,7 +3,7 @@
 Name: BetterChat
 Type: Addon
 Author: Kurou#7608
-Version 1.0.2
+Version 1.0.3
 Website https://kinmokusei.dev/
 
 */
@@ -216,117 +216,133 @@ Website https://kinmokusei.dev/
     height: 40px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK {
-    background-color: rgb(var(--color-background2)) !important;
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya {
     border-radius: 3px !important;
     margin-top: 10px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .videoButton-3NM9Tc .controlIcon-1grhw_ {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .videoButton-3NM9Tc .controlIcon-1grhw_ {
     color: rgb(var(--color-accent)) !important;
     transition: all .2s ease-in !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .durationTimeWrapper-LdSEv8 .durationTimeDisplay-QwCeRr {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .durationTimeWrapper-LdSEv8 .durationTimeDisplay-QwCeRr {
     color: rgb(var(--color-normal)) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .durationTimeWrapper-LdSEv8 .durationTimeSeparator-1Cqi9N {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .durationTimeWrapper-LdSEv8 .durationTimeSeparator-1Cqi9N {
     color: rgb(var(--color-hidden)) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY::after,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY::before {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY::before {
     background-color: rgb(var(--color-background)) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::after,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::before {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::before {
     background-color: rgb(var(--color-accent2), 0.5) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::after,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::before {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::before {
     background-color: rgb(var(--color-accent)) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .bubble-3XikHF {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .bubble-3XikHF {
     background-color: rgb(var(--color-background2)) !important;
     border-radius: 3px !important;
     margin-top: -5px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .bubble-3XikHF::before {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .bubble-3XikHF::before {
     display: none !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarGrabber-FvJKJg {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarGrabber-FvJKJg {
     background-color: rgb(var(--color-accent2)) !important;
     border-radius: var(--roundness) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY::before,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::before,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::before,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarPreview-1gUbVy::before {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarPreview-1gUbVy::before{
     border-top-left-radius: 2px !important;
     border-bottom-left-radius: 2px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY::after,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::after,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::after,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarPreview-1gUbVy::after {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .buffer-3eVqKK::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarProgress-38I317::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .horizontal-2HFjqv .mediaBarWrapper-33h1oY .mediaBarPreview-1gUbVy::after {
     border-top-right-radius: 2px !important;
     border-bottom-right-radius: 2px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .button-ejjZWC {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .button-ejjZWC,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButton-3IDSX-,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .videoButton-3NM9Tc {
     padding: 0 !important;
     color: rgb(var(--color-normal)) !important;
-    background-color: none !important;
+    background-color: transparent !important;
     transition: all .2s ease-in-out !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .audioControls-3fmemK .button-ejjZWC:hover {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .button-ejjZWC:hover,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButton-3IDSX-:hover,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .videoButton-3NM9Tc:hover {
     transform: none !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh {
     background-color: rgb(var(--color-background2)) !important;
     border-radius: 3px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after {
     background-color: rgb(var(--color-background)) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
     background-color: rgb(var(--color-accent)) !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::before,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::before {
     border-top-left-radius: 2px !important;
     border-bottom-left-radius: 2px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after,
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarWrapper-33h1oY::after,
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317::after {
     border-top-right-radius: 2px !important;
     border-bottom-right-radius: 2px !important;
 }
 
-.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapperAudio-1Bzv_Z .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317 .mediaBarGrabber-FvJKJg {
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .volumeButtonSlider-2OrZ9e .mediaBarInteractionVolume-zGrOSh .mediaBarProgress-38I317 .mediaBarGrabber-FvJKJg {
     background-color: rgb(var(--color-accent2)) !important;
     border-radius: var(--roundness) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .hoverButtonGroup-2yZIzC {
+    right: 15px !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1FP9YQ .videoControls-2NzHnF {
+    background-color: rgb(var(--color-background2)) !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .wrapper-1FP9YQ .playPausePop-1x3uED {
+    background-color: rgb(var(--color-background2)) !important;
+    border-radius: 3px !important;
 }
 
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .container-2sjPya .embedFull-1HGV2S {
