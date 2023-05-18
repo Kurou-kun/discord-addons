@@ -3,7 +3,7 @@
 Name: BetterChat
 Type: Addon
 Author: Kurou#7608
-Version 1.0.3
+Version 1.0.4
 Website https://kinmokusei.dev/
 
 */
@@ -48,6 +48,11 @@ Website https://kinmokusei.dev/
 .chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .avatar-2e8lTP {
     border-radius: var(--roundness) !important;
     margin-left: -80px !important;
+}
+
+.chat-2ZfjoI .messagesWrapper-RpOMA3 .messageListItem-ZZ7v6g .message-2CShn3 .contents-2MsGLg .avatarDecoration-34OC0G {
+    margin-left: -80px !important;
+    transform: scale(1.3);
 }
 
 /* Message */
